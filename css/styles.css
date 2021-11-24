@@ -129,6 +129,8 @@ ul {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link {
@@ -142,6 +144,22 @@ ul {
 .nav-svg {
   margin-right: 10px;
   --color: currentColor;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* ------------------ HERO SECTION ------------------------------ */
@@ -311,6 +329,8 @@ ul {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sm-icon:focus svg,
@@ -322,6 +342,8 @@ ul {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 /* ---------------- CLIENTS --------------------------- */
@@ -346,6 +368,8 @@ ul {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -362,6 +386,7 @@ ul {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ---------------- FOOTER --------------------------- */
@@ -418,6 +443,7 @@ ul {
 
 .footer-sm .sm-icon {
   background: rgba(255, 255, 255, 0.1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-sm .sm-icon svg {
@@ -455,6 +481,12 @@ ul {
   letter-spacing: 0.03em;
 
   cursor: pointer;
+
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .portfolio-item-btn:not(:last-child) {
@@ -500,6 +532,9 @@ ul {
 .portfolio-list-item {
   margin-right: 30px;
   margin-bottom: 30px;
+
+  transition:
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list-item:nth-child(3n) {
